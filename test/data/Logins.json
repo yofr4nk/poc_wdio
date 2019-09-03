@@ -1,0 +1,11 @@
+{
+  "user": {
+    "login": "gabrjesus@gmail.com",
+    "password": "Tt13at12"
+  },
+
+  "invalidUser": {
+    "login": "gakhsslk@dsfl.com",
+    "password":"lkjsd"
+  }
+}
