@@ -1,46 +1,47 @@
-class LoginPage {
-    open() {
-        browser.url('/');
-    }
-
-    get buttonLogin() {
-        return $('div .auth-container .sign-in');
-    }
+class RegisterPage {
 
     get buttonRegister() {
         return $('div .auth-container .sign-up');
     }
 
-    get checkScreenModal(){
-        return $('.signin .image');
+    get inputName(){
+        return $('#name');
     }
-  
-    get inputEmail() {
+
+    get checkboxPrivacyPolicy(){
+        return $('div .checkbox');
+    }
+ 
+    get buttonConfirmName(){
+        return $('button=Confirmar nombre');
+    }
+
+    get inputEmail(){
         return $('#email');
-    }
-
-    get inputPassword() {
-        return $('#password');
-    }
-
-    get buttonSignIn() {
-        return $('#login-button');
-    }
-
-    get welcomeMessage() {
-        return $('span=Gabriel');
-    }
-
-    get messageErrorUserOrPassword(){
-        return $('span=Usuario y/o Contraseña incorrecta');
     }
 
     get buttonConfirmEmail(){
         return $('button=Confirmar email');
     }
 
-    get messageSuccesfulRecoveryPass(){
-        return $('.title-message')
+    get inputPassword() {
+        return $('#password');
+    }
+
+    get inputPasswordVerification() {
+        return $('#password-verification');
+    }
+
+    get buttonConfirmPassword(){
+        return $('button=Confirmar contraseña');
+    }
+
+    get textThankYouMessage(){
+        return $('div .title');
+    }
+
+    get buttonConfirmEmail(){
+        return $('button=Empezar a comprar');
     }
 
     login(user) {
@@ -62,4 +63,4 @@ class LoginPage {
         }
     }
 
-export const loginPage = new LoginPage();
+export const registerPage = new RegisterPage();
