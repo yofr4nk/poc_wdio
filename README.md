@@ -15,10 +15,10 @@ Install the dependencies:
 yarn install
 ```
 
-Start a Selenium Server with Zalenium:
+Start a Selenium Server:
 
  ```bash
-docker-compose up -d zalenium
+docker-compose up -d
 ```
 
 In wdio.conf.js file configure the host of the Selenium Server `hostname` (default: localhost).  

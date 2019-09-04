@@ -11,9 +11,6 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
-            'zal:recordVideo': false,
-            'zal:name': 'Demo Integration Tests',
-            'zal:build': 'WebDriverIO',
         },
     ],
     logLevel: 'trace',

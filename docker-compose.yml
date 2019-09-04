@@ -1,19 +1,52 @@
 version: "3"
 services:
-  zalenium:
-    image: dosel/zalenium
-    container_name: zalenium
-    privileged: true
-    tty: true
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "./videos:/home/seluser/videos"
+  # zalenium:
+  #   image: dosel/zalenium
+  #   container_name: zalenium
+  #   privileged: true
+  #   tty: true
+  #   volumes:
+  #     - "/var/run/docker.sock:/var/run/docker.sock"
+  #     - "./videos:/home/seluser/videos"
+  #   ports:
+  #     - "4444:4444"
+  #   command: >
+  #     start --timeZone ${TIMEZONE}
+  #           --screenWidth ${SCREENWIDTH} --screenHeight ${SCREENHEIGHT}
+  #           --maxTestSessions ${MAXTESTSESSIONS}
+  #           --desiredContainers ${CONTAINERS}
+  #           --videoRecordingEnabled ${VIDEORECORDINGENABLE}
+  #           --seleniumImageName elgalu/selenium:latest
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selenium-hub
     ports:
-      - "4444:4444"
-    command: >
-      start --timeZone ${TIMEZONE}
-            --screenWidth ${SCREENWIDTH} --screenHeight ${SCREENHEIGHT}
-            --maxTestSessions ${MAXTESTSESSIONS}
-            --desiredContainers ${CONTAINERS}
-            --videoRecordingEnabled ${VIDEORECORDINGENABLE}
-            --seleniumImageName elgalu/selenium:latest
+        - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome-debug:latest
+    ports:
+      - 5900:5900
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  firefox:
+    image: selenium/node-firefox-debug:latest
+    ports:
+      - 5901:5900
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
