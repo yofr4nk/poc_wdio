@@ -7,5 +7,11 @@
   "invalidUser": {
     "login": "gakhsslk@dsfl.com",
     "password":"lkjsd"
+  },
+
+  "register":{
+    "name": "Automate User",
+    "email": "e2e.awdio@test.com",
+    "password":"1qa2ws3eD"
   }
 }

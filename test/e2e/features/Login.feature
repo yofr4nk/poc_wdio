@@ -1,20 +1,19 @@
 Feature: Performing a login
 
     Background:
-        Given I navigate to Tottus Website
+        Given The user navigates to Tottus Website
 
     Scenario: Login with valide user
-        When I log in with a valide user
-        Then show the user name 'Gabriel' on the site
+        When The user logs in with a valide user
+        Then show the users name 'Gabriel' on the site
 
     Scenario: Login with invalide user
-        When I log in with a invalide user
+        When The user logs in with an invalide user
         Then show an error message saying 'Usuario y/o Contraseña incorrecta'
 
     Scenario: Recovery password
-        When I want to recovery my password
+        When The user wants to recovery his password
         Then show a message saying 'Restablecimiento de contraseña'
     
-    #Scenario: Register user
 
 

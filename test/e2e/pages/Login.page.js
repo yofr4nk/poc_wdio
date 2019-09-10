@@ -7,6 +7,10 @@ class LoginPage {
         return $('div .auth-container .sign-in');
     }
 
+    get buttonRegister() {
+        return $('div .auth-container .sign-up');
+    }
+
     get checkScreenModal(){
         return $('.signin .image');
     }
