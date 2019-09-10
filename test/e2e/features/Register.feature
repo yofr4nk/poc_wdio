@@ -4,5 +4,6 @@ Background:
     Given The user navigates to Tottus Website
 
 Scenario: Verify the Registration functionality
-   When The user register with valid data
+   When The user registers with name data
+   
    Then show the successfull registration message

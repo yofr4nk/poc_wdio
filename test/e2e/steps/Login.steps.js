@@ -16,7 +16,7 @@ Then(/^show the users name '(.+)' on the site$/, (userName) => {
 });
 
 When(/^The user logs in with an invalide user$/, () => {
-    loginPage.login(context.logins.invalidUser);
+    loginPage.login(context.userdata.invalidUser);
 });
 
 Then(/^show an error message saying '(.+)'$/, (message) => {  
@@ -24,7 +24,7 @@ Then(/^show an error message saying '(.+)'$/, (message) => {
 });
 
 When(/^The user wants to recovery his password$/,() => {
-    loginPage.recoveryMyPass(context.logins.user);
+    loginPage.recoveryMyPass(context.userdata.user);
 });
 
 Then(/^show a message saying '(.+)'$/, (message) => {  

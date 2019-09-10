@@ -40,11 +40,11 @@ class RegisterPage {
         return $('div .title');
     }
 
-    get buttonConfirmEmail(){
+    get buttonStartToBuy(){
         return $('button=Empezar a comprar');
     }
 
-    login(user) {
+    register(user) {
         if (this.buttonLogin.isExisting()) {
             this.buttonLogin.click();
             this.inputEmail.waitForEnabled();
