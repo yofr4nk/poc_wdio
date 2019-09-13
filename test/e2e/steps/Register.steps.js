@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { When, Then, And } from 'cucumber';
+import { When, Then,} from 'cucumber';
 import { registerPage } from '../pages/Register.page';
 import { context } from '../../data/Context';
 
@@ -12,7 +12,7 @@ Then(/^shows a modal to enter and confirm the name and accepts the privacy polic
     registerPage.enterName(context.userdata.register);
 });
 
-And(/^the user enters the email and confirm it$/,() => {
+Then(/^the user enters the email and confirm it$/,() => {
     registerPage.enterEmail(context.userdata.register);
 });
 
@@ -20,7 +20,8 @@ Then(/^set a password for the account and accepts the terms and conditions$/,() 
     registerPage.setPassword(context.userdata.register);
 }); 
 
-And(/^show the successfull registration message '(.+)'$/,(message) => {
+Then(/^show the successfull registration message '(.+)'$/,(message) => {
+    registerPage.completeRegistration();
     assert.equal(registerPage.textThankYouMessage.getText(),message);
     registerPage.buttonStartToBuy.click();
 });

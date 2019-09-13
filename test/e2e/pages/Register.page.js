@@ -37,7 +37,7 @@ class RegisterPage {
     }
 
     get textThankYouMessage(){
-        return $('div .title');
+        return $('div .title > div');
     }
 
     get buttonStartToBuy(){
@@ -55,7 +55,8 @@ class RegisterPage {
     enterName(register){
         if ( this.inputName.isExisting()){
             this.inputName.setValue(register.name);
-            this.checkboxPrivacyPolicy.click();
+            this.checkboxPrivacyPolicies.click();
+            this.buttonConfirmName.waitForEnabled();
             this.buttonConfirmName.click();
         }
         
@@ -77,6 +78,9 @@ class RegisterPage {
         }
     }
 
+    completeRegistration(){
+        this.textThankYouMessage.waitForDisplayed();
+    }
 }
 
 export const registerPage = new RegisterPage();
