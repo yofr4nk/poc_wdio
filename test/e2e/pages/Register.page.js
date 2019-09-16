@@ -8,7 +8,7 @@ class RegisterPage {
         return $('#name');
     }
 
-    get checkboxPrivacyPolicy(){
+    get checkboxPrivacyPolicies(){
         return $('div .checkbox');
     }
  
@@ -37,30 +37,50 @@ class RegisterPage {
     }
 
     get textThankYouMessage(){
-        return $('div .title');
+        return $('div .title > div');
     }
 
     get buttonStartToBuy(){
         return $('button=Empezar a comprar');
     }
 
-    register(user) {
-        if (this.buttonLogin.isExisting()) {
-            this.buttonLogin.click();
-            this.inputEmail.waitForEnabled();
-            this.inputEmail.setValue(user.login);
-            this.inputPassword.setValue(user.password);
-            this.buttonSignIn.click();
+    
+    
+    goToregister() {
+        if (this.buttonRegister.waitForEnabled()) {
+            this.buttonRegister.click();
         }
     }
 
-    recoveryMyPass(user){
-            browser.url('/mi-cuenta/recuperar');
-            this.inputEmail.waitForEnabled();
-            this.inputEmail.setValue(user.login);
-            this.buttonConfirmEmail.click();
+    enterName(register){
+        if ( this.inputName.isExisting()){
+            this.inputName.setValue(register.name);
+            this.checkboxPrivacyPolicies.click();
+            this.buttonConfirmName.waitForEnabled();
+            this.buttonConfirmName.click();
+        }
         
+    }
+
+    enterEmail(register){
+        if ( this.inputEmail.isExisting()){
+            this.inputEmail.setValue(register.email);
+            this.buttonConfirmEmail.click();
+        }        
+    }
+
+    setPassword(register){
+        if ( this.inputPassword.isExisting()){
+            this.inputPassword.setValue(register.password);
+            this.inputPasswordVerification.setValue(register.password);
+            this.checkboxPrivacyPolicies.click();
+            this.buttonConfirmPassword.click();
         }
     }
+
+    completeRegistration(){
+        this.textThankYouMessage.waitForDisplayed();
+    }
+}
 
 export const registerPage = new RegisterPage();

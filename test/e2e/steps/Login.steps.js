@@ -8,7 +8,7 @@ Given(/^The user navigates to Tottus Website$/, () => {
 });
 
 When(/^The user logs in with a valide user$/, () => {
-    loginPage.login(context.logins.user);
+    loginPage.login(context.userdata.user);
 });
 
 Then(/^show the users name '(.+)' on the site$/, (userName) => {  

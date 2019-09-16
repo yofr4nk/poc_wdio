@@ -6,11 +6,11 @@ exports.config = {
     port: 4444,
     path: '/wd/hub',
     specs: ['./test/e2e/features/*.feature'],
-    maxInstances: 1,
+    maxInstances: 2,
     capabilities: [
         {
-            maxInstances: 1,
-            browserName: 'chrome',
+            maxInstances: 2,
+            browserName: 'chrome', 
         },
     ],
     logLevel: 'trace',
@@ -47,7 +47,7 @@ exports.config = {
         source: true,
         profile: [],
         strict: false,
-        tags: [],
+        tags: ['@register'],
         timeout: 60000,
         ignoreUndefinedDefinitions: false,
     },
