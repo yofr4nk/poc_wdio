@@ -37,7 +37,7 @@ class RegisterPage {
     }
 
     get textThankYouMessage(){
-        return $('section .SignUpSuccess > div[1]');
+        return $('section .SignUpSuccess div');
     }
 
     get buttonStartToBuy(){
