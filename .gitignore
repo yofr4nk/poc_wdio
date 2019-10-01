@@ -2,3 +2,9 @@
 node_modules/
 
 test-report/
+
+reports/
+
+yarn.lock
+
+yarn-error.log

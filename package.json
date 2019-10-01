@@ -1,13 +1,12 @@
 {
-  "name": "demo-webdriverio-cucumber",
+  "name": "tottus-orion-e2e",
   "version": "0.0.1",
-  "description": "Demo Integration Tests with WebdriverIO and Cucumber",
+  "description": "POC Integration Tests with WebdriverIO and Cucumber",
   "repository": {
     "type": "git",
-    "url": "git@github.com:WarleyGabriel/demo-webdriverio-cucumber.git"
+    "url": "git@github.com:arochagabriel/poc_wdio.git"
   },
-  "license": "ISC",
-  "author": "Warley Gabriel da Paixão",
+  "author": "Gabriel Arocha",
   "main": "index.js",
   "scripts": {
     "code:check": "yarn code:lint && yarn code:prettier",
@@ -17,7 +16,8 @@
     "report:allure": "./node_modules/allure-commandline/bin/allure",
     "report:generate": "yarn report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "yarn report:allure open test-report/allure-report",
-    "tests:e2e": "wdio wdio.conf.js"
+    "tests:e2e": "wdio wdio.conf.js",
+    "tests:api": "autokin -e"
   },
   "dependencies": {
     "@babel/cli": "^7.5.0",
@@ -36,6 +36,7 @@
     "@wdio/spec-reporter": "^5.11.0",
     "@wdio/sync": "^5.11.0",
     "allure-commandline": "^2.9.0",
+    "autokin": "^1.8.7",
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
     "eslint": "^6.3.0",

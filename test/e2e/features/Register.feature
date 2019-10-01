@@ -1,4 +1,3 @@
-@register
 Feature: Performing a user register
 
 Background:
