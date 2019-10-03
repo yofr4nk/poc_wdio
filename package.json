@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git@github.com:arochagabriel/poc_wdio.git"
   },
+  "license": "ISC",
   "author": "Gabriel Arocha",
   "main": "index.js",
   "scripts": {
@@ -17,7 +18,7 @@
     "report:generate": "yarn report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "yarn report:allure open test-report/allure-report",
     "tests:e2e": "wdio wdio.conf.js",
-    "tests:api": "autokin -e"
+    "tests:api": "autokin -e --specs test/api/features"
   },
   "dependencies": {
     "@babel/cli": "^7.5.0",
@@ -36,13 +37,16 @@
     "@wdio/spec-reporter": "^5.11.0",
     "@wdio/sync": "^5.11.0",
     "allure-commandline": "^2.9.0",
-    "autokin": "^1.8.7",
+    "autokin": "^1.8.8",
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
-    "eslint": "^6.3.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react":"^7.14.2",
+    "eslint-plugin-react-hooks":"^1.7.0",
     "eslint-plugin-import": "^2.18.0",
     "fibers": "^4.0.1",
     "husky": "^3.0.1",
