@@ -1,5 +1,5 @@
-import userdata from './UserData.json';
+import userdata from "./UserData.json";
 
 export const context = {
-    userdata,
+  userdata
 };

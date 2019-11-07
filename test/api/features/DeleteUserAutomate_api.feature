@@ -29,3 +29,5 @@ Feature: Clean data
 		Given I set the bearer token with "userSessionToken"
         When  I perform DELETE to /customers/v1/{userId}
      	Then response status code should be 200
+
+#api.e2e@g.com
