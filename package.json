@@ -1,6 +1,6 @@
 {
   "name": "tottus-orion-e2e",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "POC Integration Tests with WebdriverIO and Cucumber",
   "repository": {
     "type": "git",
