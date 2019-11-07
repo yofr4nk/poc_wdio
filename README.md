@@ -4,7 +4,7 @@ Requirements
 
 - node >= 10.15.x - [how to install Node](https://nodejs.org/en/download/)
 - yarn >= 1.16.x - [how to install Yarn](https://yarnpkg.com/en/docs/install#debian-stable)
-- Selenium Server: Here's how to set up a server: [Zalenium](https://github.com/zalando/zalenium) or [Selenium HQ](https://github.com/SeleniumHQ/docker-selenium)
+- Selenium Server: Here's how to set up a server: [Selenium HQ](https://github.com/SeleniumHQ/docker-selenium)
 
 - Docker 
 

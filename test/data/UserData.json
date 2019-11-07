@@ -1,17 +1,17 @@
 {
   "user": {
     "login": "gabrjesus@gmail.com",
-    "password": "Tt13at12"
+    "password": "Rr13ar12"
   },
 
   "invalidUser": {
     "login": "gakhsslk@dsfl.com",
-    "password":"lkjsd"
+    "password": "lkjsd"
   },
 
-  "register":{
+  "register": {
     "name": "Automate User",
     "email": "e2e.awdio@test.com",
-    "password":"1qa2ws3eD"
+    "password": "1qa2ws3eD"
   }
 }

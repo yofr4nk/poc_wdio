@@ -1,0 +1,9 @@
+.idea/*
+test/api/*
+documents/*
+images/*
+node_modules/*
+test-report/*
+reports/*
+videos/*
+wdio.conf.js
